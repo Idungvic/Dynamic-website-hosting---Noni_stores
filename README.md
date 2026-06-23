@@ -1,70 +1,191 @@
-# Getting Started with Create React App
+# 🛍️ noni Store’s
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Status](https://img.shields.io/badge/Status-Live-brightgreen) ![AWS](https://img.shields.io/badge/Cloud-AWS%20DynamoDB-orange) ![React](https://img.shields.io/badge/Frontend-React.js-blue) ![Node](https://img.shields.io/badge/Backend-Node.js-green) ![S3](https://img.shields.io/badge/Hosted-AWS%20S3-yellow)
 
-## Available Scripts
+A bright, colorful, and vibrant full stack e-commerce web application where customers can browse and purchase fashion items including Shoes, Clothes, Dresses, Bags, Accessories, and Jewelry. Built with React.js, Node.js, and AWS DynamoDB, hosted live on AWS S3.
 
-In the project directory, you can run:
+🌐 **Live Site:** <http://noni-stores-website.s3-website-us-west-2.amazonaws.com>
 
-### `npm start`
+-----
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Browse products across 6 fashion categories
+- Add items to shopping cart and wishlist
+- Full checkout with 7 payment options
+- Automated order confirmation emails via EmailJS
+- Admin dashboard with live sales analytics
+- Cloud storage powered by AWS DynamoDB
+- Hosted live on AWS S3
 
-### `npm test`
+-----
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 💳 Payment Options
 
-### `npm run build`
+- Debit Card (Visa, Mastercard, Verve)
+- OPay
+- PalmPay
+- PayPal
+- Moniepoint
+- USSD (No internet needed)
+- Cash Payment (Walk-in customers)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-----
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛒 Product Categories
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Shoes, Clothes, Dresses, Bags, Accessories, Jewelry
 
-### `npm run eject`
+-----
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+|Layer   |Technology                         |
+|--------|-----------------------------------|
+|Frontend|React.js, React Router, React Icons|
+|Backend |Node.js, Express.js                |
+|Database|AWS DynamoDB (us-west-2)           |
+|Hosting |AWS S3 Static Website              |
+|Email   |EmailJS                            |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-----
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📁 Project Structure
 
-## Learn More
+```
+noni-stores/
+  backend/
+    server.js
+    package.json
+  frontend/
+    src/
+      components/
+        Navbar.js
+        Footer.js
+        ProductCard.js
+      context/
+        StoreContext.js
+      data/
+        products.js
+      pages/
+        Home.js
+        Products.js
+        ProductDetail.js
+        Cart.js
+        Wishlist.js
+        Checkout.js
+        OrderConfirmation.js
+        Admin.js
+      App.js
+      App.css
+    public/
+  .gitignore
+  README.md
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-----
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Getting Started
 
-### Code Splitting
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Node.js installed
+- AWS Account
+- EmailJS Account
 
-### Analyzing the Bundle Size
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**1. Clone the repository**
 
-### Making a Progressive Web App
+```bash
+git clone https://github.com/Chinonsoviv/noni-stores.git
+cd noni-stores
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**2. Set up the backend**
 
-### Advanced Configuration
+```bash
+cd backend
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**3. Create backend/.env**
 
-### Deployment
+```
+AWS_REGION=us-west-2
+AWS_ACCESS_KEY_ID=your_key
+AWS_SECRET_ACCESS_KEY=your_secret
+PORT=5000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**4. Set up the frontend**
 
-### `npm run build` fails to minify
+```bash
+cd ../frontend
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**5. Run the app**
+
+Terminal 1:
+
+```bash
+cd backend
+node server.js
+```
+
+Terminal 2:
+
+```bash
+cd frontend
+npm start
+```
+
+Visit `http://localhost:3000`
+
+-----
+
+## ☁️ AWS Setup
+
+1. Create two DynamoDB tables in us-west-2
+1. Table 1: `noniOrders` with partition key `id` (String)
+1. Table 2: `noniProducts` with partition key `id` (String)
+1. Add your AWS credentials to `backend/.env`
+
+-----
+
+## 📧 Email Setup
+
+1. Create an account at emailjs.com
+1. Connect your Gmail as an email service
+1. Create an order confirmation template
+1. Add your Service ID, Template ID, and Public Key to `Checkout.js`
+
+-----
+
+## 🌐 Deployment
+
+**Frontend on AWS S3:**
+
+```bash
+cd frontend
+npm run build
+```
+
+Upload the build folder contents to your S3 bucket with static website hosting enabled.
+
+**Backend on Render.com:**
+
+1. Connect your GitHub repository to Render
+1. Set root directory to `backend`
+1. Add environment variables
+1. Deploy
+
+-----
+
+## 👩‍💻 Author
+
+**Idung Victor Hogan**
+Cloud Computing and Full Stack Development Portfolio Project 2026
+
+[![GitHub](https://img.shields.io/badge/GitHub-Chinonsoviv-black)](https://github.com/Chinonsoviv)
