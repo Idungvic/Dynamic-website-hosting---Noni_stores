@@ -46,7 +46,6 @@ Shoes, Clothes, Dresses, Bags, Accessories, Jewelry
 |Backend |Node.js, Express.js                |
 |Database|AWS DynamoDB (us-west-2)           |
 |Hosting |AWS S3 Static Website              |
-|Email   |EmailJS                            |
 
 -----
 
@@ -98,7 +97,7 @@ noni-stores/
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/Chinonsoviv/noni-stores.git
+git clone https://github.com/Idungvic/noni-stores.git
 cd noni-stores
 ```
 
@@ -188,4 +187,4 @@ Upload the build folder contents to your S3 bucket with static website hosting e
 **Idung Victor Hogan**
 Cloud Computing and Full Stack Development Portfolio Project 2026
 
-[![GitHub](https://img.shields.io/badge/GitHub-Chinonsoviv-black)](https://github.com/Chinonsoviv)
+[![GitHub]](https://github.com/idungvic)
